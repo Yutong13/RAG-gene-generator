@@ -12,7 +12,8 @@ def main():
     names = []
     for code in icd_code:
         icd_row = df[df['CODE'] == code] # search for ICD code
-        names.append(icd_row.iloc[:, 1].to_list()[0]) # Names in Short is second column in scv
+        if icd_row.iloc[:, 1].to_list() != []:
+            names.append(icd_row.iloc[:, 1].to_list()[0]) # Names in Short is second column in scv
     print("Names:\n", names)
 
 main()
