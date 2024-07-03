@@ -1,4 +1,4 @@
-# from code_generator import predict_icd_code
+from code_generator import predict_icd_code
 import pandas as pd
 
 def main():
