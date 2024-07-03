@@ -1,4 +1,4 @@
-from code_generator import predict_icd_code
+# from code_generator import predict_icd_code
 import pandas as pd
 
 def main():
@@ -12,7 +12,7 @@ def main():
     names = []
     for code in icd_code:
         icd_row = df[df['CODE'] == code] # search for ICD code
-        names.append(icd_row.iloc[:, 1].to_string()) # Names in Short is second column in scv
+        names.append(icd_row.iloc[:, 1].to_list()[0]) # Names in Short is second column in scv
     print("Names:\n", names)
-    
+
 main()
