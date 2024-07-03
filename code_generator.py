@@ -17,8 +17,3 @@ def predict_icd_code(text):
     answer = [config.id2label[ids] for ids in results]
     
     return answer
-
-# 示例调用
-text = "autism"
-predicted_codes = predict_icd_code(text)
-print(predicted_codes)
